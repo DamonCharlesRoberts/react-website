@@ -53,8 +53,8 @@ export default function Footer() {
         </span>
         2021 - {new Date().getFullYear()} Damon Charles Roberts
       </p>
-      <p>
-        All content licensed under{""}
+      <p className="footer-text mt-8 text-neutral-600 dark:text-neutral-300">
+        All content licensed under {""}
         <a
           href="https://creativecommons.org/licenses/by-nc/4.0/"
           target="_blank"

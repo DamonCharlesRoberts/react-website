@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 //import { GeistSans } from "geist/font/sans";
 //import { GeistMono } from "geist/font/mono";
-//import { Navbar } from "./components/nav";
+import Navbar from "./components/nav";
 //import { Analytics } from "@vercel/analytics/react";
 //import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
@@ -64,6 +64,7 @@ export default function RootLayout({
       )}
     >
       <body className="antialiased ${geistSans.variable} ${geistMono.variable} max-w-xl mx-4 mt-8 lg:mx-auto">
+        <Navbar />
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           {children}
           <Footer />
