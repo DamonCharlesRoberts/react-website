@@ -6,8 +6,8 @@ export default function Home() {
       </h1>
       <p className="mb-4 text-center">
         A computational social scientist and advocate of open science who
-        projects outcomes by fitting Bayesian models on data, build web
-        applications, and engineer data pipelines.
+        forecasts with Bayesian statistical models, builds web
+        applications, and engineers data pipelines.
       </p>
       <p className="mb-4 text-center">
         My academic research is featured in a number of peer-reviewed academic
