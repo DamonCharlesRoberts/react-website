@@ -6,7 +6,7 @@ export default function Home() {
       </h1>
       <p className="mb-4 text-center">
         A computational social scientist and advocate of open science who
-        project outcomes by fitting Bayesian models on data, build web
+        projects outcomes by fitting Bayesian models on data, build web
         applications, and engineer data pipelines.
       </p>
       <p className="mb-4 text-center">
