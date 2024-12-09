@@ -51,15 +51,11 @@ export default function Footer() {
             style={{ height: "20px" }}
           />
         </span>
-        2021 - {new Date().getFullYear()} Damon Charles Roberts
-      </p>
-      <p className="footer-text mt-8 text-neutral-600 dark:text-neutral-300">
-        All content licensed under {""}
         <a
           href="https://creativecommons.org/licenses/by-nc/4.0/"
           target="_blank"
         >
-          Creative Commons CC BY-NC 4.0
+          2021 - {new Date().getFullYear()} Damon Charles Roberts
         </a>
       </p>
     </footer>
