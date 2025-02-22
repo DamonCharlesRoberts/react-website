@@ -196,6 +196,15 @@ export default function Post() {
         )}
       </div>
       <br></br>
+      <div>
+      <iframe
+        src="/2019_estimates.html"
+        width="100%"
+        height="500px"
+        title="Plotly Chart"
+        frameBorder="0"
+      ></iframe>
+    </div>
     </section>
   );
 }
