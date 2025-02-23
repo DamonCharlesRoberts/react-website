@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import React from 'react';
+import React from "react";
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 export default function Post() {
@@ -136,7 +136,7 @@ export default function Post() {
         The task of sorting this out seems relatively complicated at first blush.
         And it kind of is, thankfully we have a class of statistical models that
         do not force us to deliberate in a committee. Instead, we can estimate each
-        team\'s latent (latent meaning that we cannot directly measure it easily
+        team&apos;s latent (latent meaning that we cannot directly measure it easily
         since not every team plays against one another) ability based on who they win
         against and who they lose against.
       </p>
@@ -269,8 +269,8 @@ export default function Post() {
       >
       The results of these models are in the plots below. The dot represents
       the median ranking for each team that the model has estimated. The bars
-      reflect the range of the model\'s uncertainty about the ranking of the
-      team. This range reflects that the team\'s rank is expected to fall
+      reflect the range of the model&apos;s uncertainty about the ranking of the
+      team. This range reflects that the team&apos;s rank is expected to fall
       within this range 95% of the time.
       </p>
       <br></br>
@@ -335,7 +335,7 @@ export default function Post() {
         style={{ opacity: getOpacity(7), transition: "opacity 0.2s ease-out" }}
       >
           - Play around with the priors for the parameters a bit more.
-          Though from testing, I don\'t think they will make too much of a
+          Though from testing, I don&apos;t think they will make too much of a
           difference here.
       </p>
       <p
@@ -347,7 +347,7 @@ export default function Post() {
           each team tends to remain relatively stable over time. While
           pitching may change, the rotation of pitchers tends to remain
           somewhat stable. So, it may be something to try, but my
-          <i> a priori</i> expectation is that it won\'t help the model
+          <i> a priori</i> expectation is that it won&apos;t help the model
           much.
       </p>
       <p
