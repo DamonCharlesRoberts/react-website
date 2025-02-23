@@ -105,7 +105,7 @@ export default function Post() {
       ,"Ordered outcome": "/2024_mag_estimates.html"
     },
   };
-  const plot = plotsData[String(seasons)]?.[model];
+  const plot = plotsData[seasons as keyof typeof plotsData]?.[model];
   return (
     <section>
       <h1 className="mb-8 text-center text-2xl font-semibold tracking-tighter">
