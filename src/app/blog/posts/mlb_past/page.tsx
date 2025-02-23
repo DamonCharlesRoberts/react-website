@@ -73,39 +73,39 @@ export default function Post() {
   const handleModelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setModel(event.target.value);
   };
-  const plotsData = {
-    2019: {
+  const plotsData: Record<string, Record<string, string>>= {
+    "2019": {
       "Simple": "/2019_btl_estimates.html"
       ,"Home-field adv.": "/2019_home_estimates.html"
       ,"Ordered outcome": "/2019_mag_estimates.html"
     },
-    2020: {
+    "2020": {
       "Simple": "/2020_btl_estimates.html"
       ,"Home-field adv.": "/2020_home_estimates.html"
       ,"Ordered outcome": "/2020_mag_estimates.html"
     },
-    2021: {
+    "2021": {
       "Simple": "/2021_btl_estimates.html"
       ,"Home-field adv.": "/2021_home_estimates.html"
       ,"Ordered outcome": "/2021_mag_estimates.html"
     },
-    2022: {
+    "2022": {
       "Simple": "/2022_btl_estimates.html"
       ,"Home-field adv.": "/2022_home_estimates.html"
       ,"Ordered outcome": "/2022_mag_estimates.html"
     },
-    2023: {
+    "2023": {
       "Simple": "/2023_btl_estimates.html"
       ,"Home-field adv.": "/2023_home_estimates.html"
       ,"Ordered outcome": "/2023_mag_estimates.html"
     },
-    2024: {
+    "2024": {
       "Simple": "/2024_btl_estimates.html"
       ,"Home-field adv.": "/2024_home_estimates.html"
       ,"Ordered outcome": "/2024_mag_estimates.html"
     },
   };
-  const plot = plotsData[seasons as keyof typeof plotsData]?.[model];
+  const plot = plotsData[seasons]?.[model];
   return (
     <section>
       <h1 className="mb-8 text-center text-2xl font-semibold tracking-tighter">
