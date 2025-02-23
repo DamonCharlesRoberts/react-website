@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import React from 'react';
-import MathJax from "react-mathjax";
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 export default function Post() {
   const [scrollY, setScrollY] = useState(0);
@@ -151,26 +151,26 @@ export default function Post() {
         </a>.
       </p>
       <br></br>
-      <MathJax.Provider>
-        <MathJax.Node formula={"y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h})"} />
-        <MathJax.Node formula={"\\alpha \\sim \\mathcal{N}(0,1)"} />
-      </MathJax.Provider>
+      <MathJaxContext>
+        <MathJax>{"\\(y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h})\\)"}</MathJax>
+        <MathJax>{"\\(\\alpha \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
+      </MathJaxContext>
       <br></br>
       <p
         style={{ opacity: getOpacity(1), transition: "opacity 0.2s ease-out" }}
       >
-        <MathJax.Provider>
+        <MathJaxContext>
           <span>
-            Where <MathJax.Node inline formula={'y_i '}/> is equal to 0 if the
+            Where <MathJax inline>{'\\(y_i\\)'}</MathJax> is equal to 0 if the
             home team won and 1 if the away team
-            won. <MathJax.Node inline formula={' \\alpha_a '}/> is a paramater
+            won. <MathJax inline>{' \\(\\alpha_a\\) '}</MathJax> is a paramater
             for the estimated latent ability of the away team
-            while <MathJax.Node inline formula={' \\alpha_h '}/> is a parameter
+            while <MathJax inline>{' \\(\\alpha_h\\) '}</MathJax> is a parameter
             for the estimated latent ability of the home team. I then sort
-            the estimated <MathJax.Node inline formula={'\\alpha'}/> parameter 
+            the estimated <MathJax inline>{'\\(\\alpha\\)'}</MathJax> parameter 
             in descending order to get estimated rank for each team.
           </span>
-        </MathJax.Provider>
+        </MathJaxContext>
       </p>
       <br></br>
       <div>
@@ -193,11 +193,11 @@ export default function Post() {
         parameter to estimate the home-field advantage.
       </p>
       <br></br>
-      <MathJax.Provider>
-        <MathJax.Node formula={'y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)'} />
-        <MathJax.Node formula={"\\alpha \\sim \\mathcal{N}(0,1)"} />
-        <MathJax.Node formula={"\\gamma \\sim \\mathcal{N}(0,1)"} />
-      </MathJax.Provider>
+      <MathJaxContext>
+        <MathJax>{'\\(y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)'}</MathJax>
+        <MathJax>{"\\(\\alpha \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
+        <MathJax>{"\\(\\gamma \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
+      </MathJaxContext>
       <br></br>
       <div>
         <button onClick={() => toggleCollapse(2)}>
@@ -213,7 +213,7 @@ export default function Post() {
       <p
         style={{ opacity: getOpacity(3), transition: "opacity 0.2s ease-out" }}
       >
-        <MathJax.Provider><span>
+        <MathJaxContext><span>
           Finally, I run an extension of the Bradley-Terry model which is sometimes
           referred to as 
           the <a href="https://www.tandfonline.com/doi/abs/10.1080/01621459.1970.10481082">
@@ -221,7 +221,7 @@ export default function Post() {
           </a> which allows for ties and an ordered set of
           outcomes. That is, rather than simply predicting whether or not a team
           won or not, now my model is supposed to predict the magnitude of the win.
-          That is, in this final model, <MathJax.Node inline formula={'y_i '}/> is
+          That is, in this final model, <MathJax inline>{'\\(y_i\\) '}</MathJax> is
           equal to 1 if the home team won by 5 or more runs, 2 if the home team
           won by between 2 and 4 runs, 3 if the home team won by 1 run, 4 if
           the home and away team tied, 5 if the away team won by 1 run, 6 if
@@ -230,14 +230,14 @@ export default function Post() {
           common at all due to the allowance for extra innings. This gives my
           ordered logistic regression some problems due to how rare those events
           are relative to the other possible outcomes.
-        </span></MathJax.Provider>
+        </span></MathJaxContext>
       </p>
       <br></br>
-      <MathJax.Provider>
-        <MathJax.Node formula={'y_i = ordered\\_logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)'} />
-        <MathJax.Node formula={"\\alpha \\sim \\mathcal{N}(0,1)"} />
-        <MathJax.Node formula={"\\gamma \\sim \\mathcal{N}(0,1)"} />
-      </MathJax.Provider>
+      <MathJaxContext>
+        <MathJax>{'\\(y_i = ordered\\_logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)'}</MathJax>
+        <MathJax>{"\\(\\alpha \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
+        <MathJax>{"\\(\\gamma \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
+      </MathJaxContext>
       <br></br>
       <div>
         <button onClick={() => toggleCollapse(3)}>
