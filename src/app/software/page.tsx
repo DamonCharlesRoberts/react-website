@@ -24,7 +24,7 @@ export default function Page() {
       </p>
       <br></br>
       <p>
-        <a href="https://github.com/DamonCharlesRoberts/fancy-doc">
+        <a href="https://github.com/DamonCharlesRoberts/ScrapeCongress">
           <u>ScrapeCongress - DEPRECIATED</u>
         </a>
         : An R package to scrape the tweets of current and past members of
