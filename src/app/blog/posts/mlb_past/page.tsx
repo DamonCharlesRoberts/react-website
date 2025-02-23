@@ -66,11 +66,11 @@ export default function Post() {
   const [seasons, setSeasons] = useState(2019);
   const [model, setModel] = useState("Simple");
   // Function to handle year change
-  const handleSeasonChange = (event: number) => {
+  const handleSeasonChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSeasons(event.target.value);
   };
   // Function to handle model change
-  const handleModelChange = (event: number) => {
+  const handleModelChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setModel(event.target.value);
   };
   const plotsData = {
