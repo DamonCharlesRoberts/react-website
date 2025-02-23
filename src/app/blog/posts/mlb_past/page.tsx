@@ -136,7 +136,7 @@ export default function Post() {
         The task of sorting this out seems relatively complicated at first blush.
         And it kind of is, thankfully we have a class of statistical models that
         do not force us to deliberate in a committee. Instead, we can estimate each
-        team's latent (latent meaning that we cannot directly measure it easily
+        team\'s latent (latent meaning that we cannot directly measure it easily
         since not every team plays against one another) ability based on who they win
         against and who they lose against.
       </p>
@@ -161,13 +161,13 @@ export default function Post() {
       >
         <MathJaxContext>
           <span>
-            Where <MathJax inline>{'\\(y_i\\)'}</MathJax> is equal to 0 if the
+            Where <MathJax inline>{"\\(y_i\\)"}</MathJax> is equal to 0 if the
             home team won and 1 if the away team
-            won. <MathJax inline>{' \\(\\alpha_a\\) '}</MathJax> is a paramater
+            won. <MathJax inline>{" \\(\\alpha_a\\) "}</MathJax> is a paramater
             for the estimated latent ability of the away team
-            while <MathJax inline>{' \\(\\alpha_h\\) '}</MathJax> is a parameter
+            while <MathJax inline>{" \\(\\alpha_h\\) "}</MathJax> is a parameter
             for the estimated latent ability of the home team. I then sort
-            the estimated <MathJax inline>{'\\(\\alpha\\)'}</MathJax> parameter 
+            the estimated <MathJax inline>{"\\(\\alpha\\)"}</MathJax> parameter 
             in descending order to get estimated rank for each team.
           </span>
         </MathJaxContext>
@@ -175,7 +175,7 @@ export default function Post() {
       <br></br>
       <div>
         <button onClick={() => toggleCollapse(1)}>
-          {isOpen1 ? 'Hide code ↑' : 'Show STAN code ↓'}
+          {isOpen1 ? "Hide code ↑" : "Show STAN code ↓"}
         </button>
         {isOpen1 && (
           <pre>
@@ -194,14 +194,14 @@ export default function Post() {
       </p>
       <br></br>
       <MathJaxContext>
-        <MathJax>{'\\(y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)'}</MathJax>
+        <MathJax>{"\\(y_i = logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)"}</MathJax>
         <MathJax>{"\\(\\alpha \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
         <MathJax>{"\\(\\gamma \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
       </MathJaxContext>
       <br></br>
       <div>
         <button onClick={() => toggleCollapse(2)}>
-          {isOpen2 ? 'Hide code ↑' : 'Show STAN code ↓'}
+          {isOpen2 ? "Hide code ↑" : "Show STAN code ↓"}
         </button>
         {isOpen2 && (
           <pre>
@@ -221,7 +221,7 @@ export default function Post() {
           </a> which allows for ties and an ordered set of
           outcomes. That is, rather than simply predicting whether or not a team
           won or not, now my model is supposed to predict the magnitude of the win.
-          That is, in this final model, <MathJax inline>{'\\(y_i\\) '}</MathJax> is
+          That is, in this final model, <MathJax inline>{"\\(y_i\\) "}</MathJax> is
           equal to 1 if the home team won by 5 or more runs, 2 if the home team
           won by between 2 and 4 runs, 3 if the home team won by 1 run, 4 if
           the home and away team tied, 5 if the away team won by 1 run, 6 if
@@ -234,14 +234,14 @@ export default function Post() {
       </p>
       <br></br>
       <MathJaxContext>
-        <MathJax>{'\\(y_i = ordered\\_logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)'}</MathJax>
+        <MathJax>{"\\(y_i = ordered\\_logit^{-1}(\\alpha_{a}-\\alpha_{h} + \\gamma)\\)"}</MathJax>
         <MathJax>{"\\(\\alpha \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
         <MathJax>{"\\(\\gamma \\sim \\mathcal{N}(0,1)\\)"}</MathJax>
       </MathJaxContext>
       <br></br>
       <div>
         <button onClick={() => toggleCollapse(3)}>
-          {isOpen3 ? 'Hide code ↑' : 'Show STAN code ↓'}
+          {isOpen3 ? "Hide code ↑" : "Show STAN code ↓"}
         </button>
         {isOpen3 && (
           <pre>
@@ -269,8 +269,8 @@ export default function Post() {
       >
       The results of these models are in the plots below. The dot represents
       the median ranking for each team that the model has estimated. The bars
-      reflect the range of the model's uncertainty about the ranking of the
-      team. This range reflects that the team's rank is expected to fall
+      reflect the range of the model\'s uncertainty about the ranking of the
+      team. This range reflects that the team\'s rank is expected to fall
       within this range 95% of the time.
       </p>
       <br></br>
@@ -278,11 +278,11 @@ export default function Post() {
       <select 
           value={seasons} onChange={handleSeasonChange}
           style={{
-              padding: '10px',
-              fontSize: '16px',
-              borderRadius: '5px',
-              border: '1px solid #ccc',
-              width: '200px',
+              padding: "10px",
+              fontSize: "16px",
+              borderRadius: "5px",
+              border: "1px solid #ccc",
+              width: "200px",
               color: "#ffffff",
               background: "#000000"
             }}
@@ -296,11 +296,11 @@ export default function Post() {
       <select 
           value={model} onChange={handleModelChange}
           style={{
-              padding: '10px',
-              fontSize: '16px',
-              borderRadius: '5px',
-              border: '1px solid #ccc',
-              width: '200px',
+              padding: "10px",
+              fontSize: "16px",
+              borderRadius: "5px",
+              border: "1px solid #ccc",
+              width: "200px",
               color: "#ffffff",
               background: "#000000"
             }}
@@ -335,7 +335,7 @@ export default function Post() {
         style={{ opacity: getOpacity(7), transition: "opacity 0.2s ease-out" }}
       >
           - Play around with the priors for the parameters a bit more.
-          Though from testing, I don't think they will make too much of a
+          Though from testing, I don\'t think they will make too much of a
           difference here.
       </p>
       <p
@@ -347,7 +347,7 @@ export default function Post() {
           each team tends to remain relatively stable over time. While
           pitching may change, the rotation of pitchers tends to remain
           somewhat stable. So, it may be something to try, but my
-          <i> a priori</i> expectation is that it won't help the model
+          <i> a priori</i> expectation is that it won\'t help the model
           much.
       </p>
       <p
