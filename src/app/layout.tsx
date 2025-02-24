@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   // ddescription: "This is my portfolio.",
   openGraph: {
     title: "Damon C. Roberts",
-    description: "This is my portfolio.",
+    description: "",
     // url: baseUrl,
-    siteName: "My Portfolio",
+    siteName: "Damon C. Roberts",
     locale: "en_US",
     type: "website",
   },
