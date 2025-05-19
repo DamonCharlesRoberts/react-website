@@ -4,7 +4,7 @@ const navItems = {
   "/": {
     name: "home",
   },
-  "/blog": {
+  "https://blog.damoncroberts.io": {
     name: "blog",
   },
   "/research": {
