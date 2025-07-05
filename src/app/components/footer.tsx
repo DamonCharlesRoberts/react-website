@@ -43,6 +43,15 @@ export default function Footer() {
             <p className="ml-2 h-7">view source</p>
           </a>
         </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            href="mailto:contact@damoncroberts.io"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">contact@damoncroberts.io</p>
+          </a>
+        </li>
       </ul>
       <p className="footer-text mt-8 text-neutral-600 dark:text-neutral-300">
         <span>
