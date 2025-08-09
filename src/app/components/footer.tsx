@@ -61,10 +61,10 @@ export default function Footer() {
           />
         </span>
         <a
-          href="https://creativecommons.org/licenses/by-nc/4.0/"
+          href="https://github.com/DamonCharlesRoberts/react-website?tab=License-1-ov-file"
           target="_blank"
         >
-          2021 - {new Date().getFullYear()} Damon Charles Roberts
+          {new Date().getFullYear()} Damon Charles Roberts
         </a>
       </p>
     </footer>
